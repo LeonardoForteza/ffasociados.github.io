@@ -1,107 +1,150 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forteza y Forteza Asociados - Estudio Jurídico</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        @media screen and (max-width: 768px) {
-            .imagen-esquina-derecha, .imagen-esquina-izquierda {
-                width: 80px;
-                top: 30px; /* Posicionar ligeramente más abajo */
-            }
-            .imagen-esquina-inferior-derecha {
-                width: 250px;
-                opacity: 0.8;
-                bottom: 20px;
-            }
-        }
+/* Estilo global */
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
 
-        @media screen and (max-width: 480px) {
-            .imagen-esquina-derecha, .imagen-esquina-izquierda {
-                width: 60px;
-                top: 40px; /* Posicionar aún más abajo en pantallas pequeñas */
-            }
-            .imagen-esquina-inferior-derecha {
-                width: 300px;
-                opacity: 1;
-                right: 10px;
-                bottom: 10px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Imágenes decorativas -->
-    <img src="Templario1.webp" alt="Logo1" class="imagen-esquina-derecha">
-    <img src="EscuadraCompas1-removebg-preview.png" alt="Logo2" class="imagen-esquina-izquierda">
-    <img src="Fondo1.png" alt="Logo Inferior Derecho" class="imagen-esquina-inferior-derecha">
+/* Posicionamiento de imágenes */
+.imagen-esquina-derecha, .imagen-esquina-izquierda, .imagen-esquina-inferior-derecha {
+    position: absolute;
+    z-index: 1000;
+}
 
-    <header>
-        <h1>FORTEZA & FORTEZA<br>Asociados<br>Estudio Jurídico</h1>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#areas">Áreas de Práctica</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+.imagen-esquina-derecha {
+    top: 20px;
+    right: 20px;
+    width: 150px;
+}
 
-    <main>
-        <section id="inicio">
-            <h2>Bienvenidos a Forteza & Forteza Asociados</h2>
-            <p>Soluciones legales con experiencia y compromiso.</p>
-        </section>
+.imagen-esquina-izquierda {
+    top: 20px;
+    left: 20px;
+    width: 150px;
+}
 
-        <section id="nosotros">
-            <h2>Sobre Nosotros</h2>
-            <p>Contamos con más de 30 años de experiencia ofreciendo asesoría y defensa legal de primer nivel.<br>
-            Sabemos que cada caso es único y requiere una atención personalizada.<br>
-            Por ello, nos dedicamos a brindarte soluciones claras y eficaces con un compromiso total hacia tus intereses.</p>
-        </section>
+.imagen-esquina-inferior-derecha {
+    bottom: 10px;
+    right: 10px;
+    width: 400px;
+    opacity: 0.4;
+    z-index: -1;
+}
 
-        <section id="servicios">
-            <h2>Nuestros Servicios</h2>
-            <ul>
-                <li>Asesoramiento legal</li>
-                <li>Defensa en litigios</li>
-                <li>Contratos y acuerdos</li>
-                <li>Consultoría empresarial</li>
-            </ul>
-        </section>
+/* Encabezado */
+header {
+    background: linear-gradient(to right, #0d1b2a, #1b263b);
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-        <section id="areas">
-            <h2>Áreas de Práctica</h2>
-            <ul>
-                <li>Derecho Civil</li>
-                <li>Derecho Penal</li>
-                <li>Derecho Laboral</li>
-                <li>Derecho Empresarial</li>
-                <li>Derecho Familiar</li>
-            </ul>
-        </section>
+header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    font-weight: bold;
+}
 
-        <section id="blog">
-            <h2>Blog Jurídico</h2>
-            <p>Últimas noticias y artículos sobre derecho.</p>
-        </section>
+/* Navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 10px;
+}
 
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Email: efc1965@gmail.com</p>
-            <p>Teléfonos: +591 70912143 / +591 65940083</p>
-            <p>Dirección: <a href="https://www.google.com/maps" target="_blank">Av. Guapay entre 3er y 4to anillo, C/ Bernardino Gutierrez #3085, Santa Cruz de la Sierra, Bolivia.</a></p>
-        </section>
-    </main>
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
 
-    <footer>
-        <p>&copy; 2025 Forteza & Forteza Asociados. Todos los derechos reservados.</p>
-    </footer>
-</body>
-</html>
+nav ul li a {
+    color: #f8c471;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: white;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
+}
+
+/* Secciones */
+section {
+    padding: 30px;
+    margin: 20px auto;
+    width: 85%;
+    max-width: 1100px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #1b263b;
+    border-bottom: 3px solid #f8c471;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+section p, section ul {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Pie de página */
+footer {
+    background-color: #1b263b;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    margin-top: auto;
+    font-size: 1rem;
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    section {
+        width: 95%;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .imagen-esquina-derecha, .imagen-esquina-izquierda {
+        width: 100px;
+    }
+
+    .imagen-esquina-inferior-derecha {
+        width: 150px;
+    }
+}
